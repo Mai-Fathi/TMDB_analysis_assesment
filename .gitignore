@@ -1,1 +1,5 @@
 .ipynb_checkpoints/
+api_key.py
+db
+*.csv
+__pycache__

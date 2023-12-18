@@ -1,6 +1,6 @@
 import pandas as pd 
 import sqlite3
-
+from api_key import api_key
 ################################################################
 # Extracting the Data from an API about about movies TMDB
 
@@ -9,7 +9,7 @@ movie_genres_url = "https://api.themoviedb.org/3/genre/movie/list?language=en"
 
 headers = {
     "accept": "application/json",
-    "Authorization": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhYzI4NmYzODdkNzkzYzliYzRkOWNmOTU0MDY5OWY5NyIsInN1YiI6IjY1N2RhZGRkYzkwNTRmMDcwMWI1MTQ5MSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.UjWYoaCdhkZX1IcDA3pI7XzJAviiAJ64X5-Tn_Sv6xQ"
+    "Authorization": "Bearer " + api_key
 }
 
 def get_movies_for_year(year):
